@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 3, 4, 5];
+    let i, j;
+    let dontmind = array[0];
+
+    document.write('Dãy số ban đầu:')
+    for (i=0; i < array.length; i++)
+        document.write(array[i] + ' ');
+    document.write('<br>')
+
+    for (i = 0; i <= array.length / 2; i++) {
+        j = array.length - 1 - i;
+        dontmind = array[i];
+        array[i] = array[j];
+        array[j] =dontmind;
+    }
+
+    document.write('Dãy số sau đảo ngược: ');
+    for (i=0; i < array.length; i++)
+        document.write(array[i] + ' ');
+</script>
+</body>
+</html>

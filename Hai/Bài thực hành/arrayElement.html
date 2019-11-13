@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Element</title>
+</head>
+<body>
+<input type="text" id="txt">
+<input type="button" onclick="addElementToArray()" value="Add">
+<input type="button" onclick="displayArray()" value="Display">
+<hr>
+<div id="result"></div>
+
+<script>
+    let x = 0;
+    let i;
+    let array = Array();
+
+    function addElementToArray() {
+        array[x] = document.getElementById("txt").value;
+        x++;
+        document.getElementById("txt").value = "";
+    }
+
+    function displayArray() {
+
+        for (i = 0; i < x; i++)
+            document.getElementById('result').innerHTML += 'Phần tử thứ ' + i + ' của mảng là: ' + array[i] + '<br>';
+    }
+</script>
+</body>
+</html>

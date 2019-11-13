@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>toUpperCase</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập vào một chuỗi: ');
+    let i;
+    let newStr1, newStr2, newStr3 = '';
+
+    newStr1 = str.toUpperCase();
+    newStr2 = str.toLowerCase();
+    for (i = 0; i < str.length; i++) {
+        if ( newStr1[i] == str[i])
+            newStr3 += newStr2[i];
+        else
+            newStr3 += newStr1[i];
+    }
+    alert(newStr3);
+</script>
+</body>
+</html>

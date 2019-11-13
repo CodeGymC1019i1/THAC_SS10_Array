@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Value Max</title>
+</head>
+<body>
+<script>
+    let array = [1, 2 , 3, 4, 5, 10, 11, 15, 20];
+    let max = array[0];
+    let positionMax = 0;
+    let i;
+
+    for (i = 0; i < array.length; i++) {
+        if (max < array[i]) {
+            max = array[i];
+            positionMax = i;
+        }
+    }
+
+    alert('Giá trị lớn nhất trong mảng là: ' + max + ' ở vị trí thứ '+ positionMax);
+
+</script>
+</body>
+</html>

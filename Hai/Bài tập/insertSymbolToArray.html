@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert '-' between even numbers</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập vào một số: ');
+    let i;
+    let newStr = '';
+
+    for (i = 0; i < str.length; i++) {
+        newStr += str[i];
+        if (str[i] % 2 == 0 && str[i+1] % 2 == 0)
+            newStr += '-';
+    }
+    alert(newStr);
+</script>
+</body>
+</html>
