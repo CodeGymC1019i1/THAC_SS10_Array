@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8</title>
+</head>
+<body>
+<script>
+    let array = new Array();
+    let N = 10;
+
+    function sortDecrease() {
+        let i, j;
+        let m;
+
+        for (i = 0; i < N; i++) {
+            for (j = i+1; j < N; j++)
+                if (array[i] > array[j]) {
+                    m = array[i];
+                    array[i] = array[j];
+                    array[j] = m;
+                }
+        }
+
+        document.write(array);
+    }
+
+    function initArray() {
+        let i = 0;
+        let j;
+
+        do {
+            array[i] = parseFloat(prompt('Mời bạn nhập phần tử thứ ' + i + ' của mảng 10 phần tử.'));
+            if (Number.isInteger(array[i])) {
+                i++;
+            } else
+                alert('Bạn hãy nhập số nguyên.');
+        } while (i < N);
+    }
+
+    function main() {
+        initArray();
+        sortDecrease();
+    }
+
+    main();
+
+</script>
+</body>
+</html>

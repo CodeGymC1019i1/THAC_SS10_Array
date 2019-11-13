@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4</title>
+</head>
+<body>
+<script>
+    let array = new Array();
+    let N;
+
+    function initArray() {
+        let i = 0;
+        let j;
+
+        do {
+            N = prompt('Mời bạn nhập số phần tử: ');
+        } while (isNaN(N) || N <= 0)
+
+        N = parseInt(N);
+
+        do {
+            array[i] = parseFloat(prompt('Mời bạn nhập phần tử thứ ' + i + ' của mảng 10 phần tử.'));
+            if (Number.isInteger(array[i])) {
+                i++;
+            }
+            else
+                alert('Bạn hãy nhập số nguyên.');
+        } while (i < N);
+    }
+
+    function printArray() {
+        let i;
+        for (i=0; i < N; i++) {
+            document.write(array[i] + ' ');
+        }
+    }
+
+    function reverseArray() {
+        let i;
+        let j = N - 1;
+        let m;
+
+        for (i=0; i < N/2; i++) {
+            m = array[i];
+            array[i] = array[j];
+            array[j] = m;
+            j--;
+        }
+    }
+
+    function main() {
+        initArray();
+        reverseArray();
+        printArray();
+    }
+
+    main();
+
+</script>
+</body>
+</html>

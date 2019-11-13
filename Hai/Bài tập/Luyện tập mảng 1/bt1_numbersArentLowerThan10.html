@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<script>
+    let array = new Array();
+    let N = 10;
+    let numberInput;
+
+    function initArray() {
+        let i = 0;
+        do {
+            numberInput = parseFloat(prompt('Mời bạn nhập phần tử thứ ' + i + ' của mảng 10 phần tử số nguyên.'));
+            if (Number.isInteger(numberInput)) {
+                array[i] = numberInput;
+                i++;
+            }
+            else
+                alert('Bạn hãy nhập số nguyên!');
+        } while (i < N);
+    }
+
+    function printResult(amout, printStr) {
+        document.write('Số lượng các phần tử không nhỏ hơn 10 là: ' + amout + '<br>' + 'Các phần tử đó là: ' + printStr);
+    }
+
+    function findNumbersArentLowerThan10() {
+        let i;
+        let count = 0;
+        let displayNumbers = '';
+
+        for (i=0; i<10; i++) {
+            if (array[i] >= 10) {
+                count++;
+                displayNumbers += array[i];
+            }
+        }
+
+        printResult(count, displayNumbers);
+    }
+
+    function main() {
+        initArray();
+        findNumbersArentLowerThan10();
+    }
+
+    main();
+
+</script>
+</body>
+</html>

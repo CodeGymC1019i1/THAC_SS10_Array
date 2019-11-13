@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<script>
+    let array = new Array();
+    let N;
+
+    function initArray() {
+        let i = 0;
+        let j;
+
+        do {
+            N = prompt('Mời bạn nhập số phần tử: ');
+        } while (isNaN(N) || N <= 0)
+
+        N = parseInt(N);
+
+        for (i=0; i<N;i++)
+            array[i] = prompt('Nhập phần tử thứ ' + i);
+    }
+
+    function countNumberSymbol() {
+        let i;
+        let count = 0;
+
+        for (i = 0; i < N; i++) {
+            if (isNaN(array[i]) != true)
+                count++;
+        }
+
+        document.write('Số kí tự số trong mảng là: ' + count);
+    }
+
+
+    function main() {
+        initArray();
+        countNumberSymbol();
+    }
+
+    main();
+
+</script>
+</body>
+</html>

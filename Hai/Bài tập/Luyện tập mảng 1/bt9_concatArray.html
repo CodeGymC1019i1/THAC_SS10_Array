@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 9</title>
+</head>
+<body>
+<script>
+    let arrayA = new Array();
+    let arrayB = new Array();
+    let arrayC = new Array();
+
+    let N = 10;
+
+    function concatArray() {
+        arrayC = arrayA.concat(arrayB);
+        document.write(arrayC);
+    }
+
+    function initArray() {
+        let i = 0;
+
+        do {
+            arrayA[i] = parseFloat(prompt('Mời bạn nhập phần tử thứ ' + i + ' của mảng A 10 phần tử.'));
+            if (Number.isInteger(arrayA[i])) {
+                i++;
+            } else
+                alert('Bạn hãy nhập số nguyên.');
+        } while (i < N);
+
+        i=0;
+
+        do {
+            arrayB[i] = parseFloat(prompt('Mời bạn nhập phần tử thứ ' + i + ' của mảng B 10 phần tử.'));
+            if (Number.isInteger(arrayB[i])) {
+                i++;
+            } else
+                alert('Bạn hãy nhập số nguyên.');
+        } while (i < N);
+    }
+
+    function main() {
+        initArray();
+        concatArray();
+    }
+
+    main();
+
+</script>
+</body>
+</html>
