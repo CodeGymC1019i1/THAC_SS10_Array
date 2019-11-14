@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>faking textarea on typing</title>
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <h1>Type anything slowly!</h1>
+    <textarea name="fakeText" id="fakeText" cols="30" rows="10"
+              oninput="changeText()"></textarea>
+</div>
+
+<script>
+    let i = 0;
+    let heartfeltWords = "I Love Hai So Much!!!";
+
+    function changeText(text) {
+        let fakeText = document.getElementById('fakeText');
+
+        if (i < heartfeltWords.length)
+            i++;
+        else
+            i = 1;
+        fakeText.value = heartfeltWords.substr(0,i);
+    }
+
+    function main() {
+
+    }
+
+    main();
+</script>
+</body>
+</html>
